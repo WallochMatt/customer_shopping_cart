@@ -4,13 +4,13 @@ from product_class import Product
 class Customer:
     def __init__(self, name):
         self.cust_name = name
-        self.custs_cart = ShoppingCart() #match parameters to the class(init)
+        self.custs_cart = ShoppingCart() #match parameters to the class(init) #products held?
 
     def add_new_product(self, product):       
-        self.custs_cart.add_product() #thoguht process being my newly assigned cart is being added to with add product method
+        self.custs_cart.add_product(product) #thoguht process being my newly assigned cart is being added to with add product method
 #   def add_product(self, product):
         #self.products_held.append(product.name)
 
     def view_items(self):
-        for item_index in self.custs_cart:
+        for item_index in self.custs_cart.products_held:#custs_cart:
             print(item_index)

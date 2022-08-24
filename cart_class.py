@@ -7,7 +7,8 @@ class ShoppingCart:
     def total(self, products_held):
         grand_total = 0
         for product_index in products_held:
-            grand_total = grand_total + product_index.price
+            grand_total = grand_total + product_index
+        return grand_total #"capture the total the mtehod returns"
 
     def add_product(self, product):
         self.products_held.append(product.name)#?
